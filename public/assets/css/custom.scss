@@ -1,0 +1,112 @@
+// importing bootstrap functions, variables and mixins
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/variables";
+
+// creating new values of spacing for margins, paddings and gaps
+$custom-spacers: (
+    // 32px
+    6: ($spacer * 2),
+    // 30px
+    7: ($spacer * 1.875),
+    // 20px
+    8: ($spacer * 1.25),
+    // 12px
+    9: ($spacer * 0.75),
+    // 42px
+    10: ($spacer * 2.25),
+    // 14px
+    11: ($spacer * 0.875),
+    // 54px
+    12: ($spacer * 3.375)
+);
+
+// adding new spacers values
+$spacers: map-merge(
+    $map1: $spacers,
+    $map2: $custom-spacers,
+);
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+// sidebar styling and overriding
+aside {
+    background-color: #363740;
+    max-width: 255px !important;
+    
+    header {
+        h5 {
+            color: #a4a6b3 !important;
+        }
+    }
+
+    nav {
+        a {
+            text-decoration: none;
+            color: #a4a6b3;
+            
+            &.active {
+                background-color: rgba(159, 162, 180, 0.08);
+                border-left: 3px solid #dde2ff;
+                color: #dde2ff;
+            }
+        }
+        
+        hr {
+            color: #a4a6b3;
+        }
+    }
+}
+
+// main content styling and overriding
+main {
+    background-color: #f7f8fc;
+
+    #first-row {
+        .container {
+            background-color: #ffffff;
+            border: 1px solid #dfe0eb;
+            border-radius: 8px;
+
+            h5 {
+                color: #9fa2b4;
+            }
+
+            span {
+                font-size: 3rem;
+            }
+
+            &.active {
+                border-color: #3751ff;
+
+                h5,
+                span {
+                    color: #3751ff;
+                }
+            }
+        }
+    }
+}
+
+// responsiveness overriding 
+@include media-breakpoint-down(sm) {
+    body {
+        div.row {
+            flex-direction: column;
+
+            aside {
+                max-width: 100% !important;
+
+                header {
+                    justify-content: center;
+                    padding-left: 0 !important;
+                    padding-bottom: 1rem;
+                }
+
+                nav {
+                    display: none;
+                }
+            }
+        }
+    }
+}
