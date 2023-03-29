@@ -14718,7 +14718,13 @@ main #graph-section .container span {
   font-size: 1.5rem;
 }
 main #graph-side-bar {
-  border-top-right-radius: 8px;
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+main #graph-side-bar div:first-of-type {
+  border-top-right-radius: 8px !important;
+}
+main #graph-side-bar div:last-of-type {
   border-bottom-right-radius: 8px !important;
 }
 main #third-section .container2 {

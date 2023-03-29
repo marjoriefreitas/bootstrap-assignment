@@ -116,9 +116,19 @@ main {
     }
 
     #graph-side-bar {
-        border-top-right-radius: 8px;
+        border-top-right-radius: 8px !important;
         border-bottom-right-radius: 8px !important;
+        
+        div:first-of-type {
+            border-top-right-radius: 8px !important;
+        }
+        
+        div:last-of-type {
+            border-bottom-right-radius: 8px !important;
+        }
+        
     }
+
 
     #third-section {
         .container2 {
