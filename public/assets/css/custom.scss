@@ -22,10 +22,9 @@ $custom-spacers: (
 );
 
 // adding new spacers values
-$spacers: map-merge(
-    $map1: $spacers,
-    $map2: $custom-spacers,
-);
+$spacers: map-merge($map1: $spacers,
+        $map2: $custom-spacers,
+    );
 
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
@@ -33,7 +32,11 @@ $spacers: map-merge(
 aside {
     background-color: #363740;
     max-width: 255px !important;
-    
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+
     header {
         h5 {
             color: #a4a6b3 !important;
@@ -44,14 +47,14 @@ aside {
         a {
             text-decoration: none;
             color: #a4a6b3;
-            
+
             &.active {
                 background-color: rgba(159, 162, 180, 0.08);
                 border-left: 3px solid #dde2ff;
                 color: #dde2ff;
             }
         }
-        
+
         hr {
             color: #a4a6b3;
         }
@@ -67,6 +70,10 @@ main {
             background-color: #ffffff;
             border: 1px solid #dfe0eb;
             border-radius: 8px;
+
+            &:hover {
+                cursor: pointer;
+            }
 
             h5 {
                 color: #9fa2b4;
@@ -86,10 +93,12 @@ main {
             }
         }
     }
-    #graph-section{
+
+    #graph-section {
         background-color: #ffffff;
         border: 1px solid #dfe0eb;
         border-radius: 8px;
+
         .container {
             background-color: #ffffff;
             border: 1px solid #dfe0eb;
@@ -105,11 +114,13 @@ main {
 
         }
     }
+
     #graph-side-bar {
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px !important;
     }
-    #third-section{
+
+    #third-section {
         .container2 {
             background-color: #ffffff;
             border: 1px solid #dfe0eb;
@@ -118,32 +129,40 @@ main {
             h5 {
                 font-size: 1.5rem;
             }
+
             h6 {
                 font-size: 1rem;
-                
+
             }
+
             div span {
                 font-size: 1rem;
                 color: #9fa2b4;
                 margin-top: -2rem;
             }
+
             .smalltext {
                 font-size: 0.9rem;
                 color: #9fa2b4;
             }
+
             .support {
                 color: black;
             }
-            .details{
+
+            .details {
                 color: #3751ff;
             }
-            .border3{
+
+            .border3 {
                 border-bottom: 1px solid #dfe0eb;
-            
+
             }
-            .right-Item{
+
+            .right-Item {
                 margin-top: -0.1rem;
             }
+
             .checkbox-round {
                 width: 1.3em;
                 height: 1.3em;
@@ -152,23 +171,47 @@ main {
                 vertical-align: middle;
                 border: 1px solid #9fa2b4;
                 appearance: none;
-                -webkit-appearance:none;
+                -webkit-appearance: none;
                 cursor: pointer;
+                position: relative;
             }
-            
+
             .checkbox-round:checked {
                 background-color: #3751ff;
             }
-            .sign-style{
+
+            /* Create the checkmark/indicator (hidden when not checked) */
+            .checkbox-round:after {
+                content: "";
+                position: absolute;
+                display: block;
+            }
+
+            /* Style the checkmark/indicator */
+            .checkbox-round:after {
+                left: 8px;
+                top: 4px;
+                width: 4px;
+                height: 8px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+            .sign-style {
                 background-color: #ededed;
-                width: 30px;
-                height: 30px;
+                min-width: 30px;
+                min-height: 30px;
                 font-size: 20px;
                 text-align: center;
                 color: #9fa2b4;
                 border-radius: 8px;
+                display: inline-block;
             }
-            .urgent-style{
+
+            .urgent-style {
                 background-color: #fdc432;
                 padding: 0.3rem 1rem 0.3rem 1rem;
                 font-size: 0.8rem;
@@ -176,7 +219,8 @@ main {
                 color: #ffffff;
                 border-radius: 8px;
             }
-            .new-style{
+
+            .new-style {
                 background-color: #1ec188;
                 padding: 0.3rem 1rem 0.3rem 1rem;
                 font-size: 0.8rem;
@@ -184,7 +228,8 @@ main {
                 color: #ffffff;
                 border-radius: 8px;
             }
-            .default-style{
+
+            .default-style {
                 background-color: #ededed;
                 padding: 0.3rem 1rem 0.3rem 1rem;
                 font-size: 0.8rem;
@@ -193,8 +238,8 @@ main {
                 border-radius: 8px;
             }
         }
-        
-    
+
+
     }
 }
 

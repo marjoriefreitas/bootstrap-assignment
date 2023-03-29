@@ -14656,6 +14656,10 @@ textarea.form-control-lg {
 aside {
   background-color: #363740;
   max-width: 255px !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
 }
 aside header h5, aside header .h5 {
   color: #a4a6b3 !important;
@@ -14680,6 +14684,9 @@ main #first-row .container {
   background-color: #ffffff;
   border: 1px solid #dfe0eb;
   border-radius: 8px;
+}
+main #first-row .container:hover {
+  cursor: pointer;
 }
 main #first-row .container h5, main #first-row .container .h5 {
   color: #9fa2b4;
@@ -14718,6 +14725,8 @@ main #third-section .container2 {
   background-color: #ffffff;
   border: 1px solid #dfe0eb;
   border-radius: 8px;
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Style the checkmark/indicator */
 }
 main #third-section .container2 h5, main #third-section .container2 .h5 {
   font-size: 1.5rem;
@@ -14756,18 +14765,36 @@ main #third-section .container2 .checkbox-round {
   appearance: none;
   -webkit-appearance: none;
   cursor: pointer;
+  position: relative;
 }
 main #third-section .container2 .checkbox-round:checked {
   background-color: #3751ff;
 }
+main #third-section .container2 .checkbox-round:after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+main #third-section .container2 .checkbox-round:after {
+  left: 8px;
+  top: 4px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 main #third-section .container2 .sign-style {
   background-color: #ededed;
-  width: 30px;
-  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
   font-size: 20px;
   text-align: center;
   color: #9fa2b4;
   border-radius: 8px;
+  display: inline-block;
 }
 main #third-section .container2 .urgent-style {
   background-color: #fdc432;
