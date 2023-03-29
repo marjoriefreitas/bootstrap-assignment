@@ -60,6 +60,7 @@
         </aside>
         <!-- main content -->
         <main class="col p-7">
+            <!-- Top header -->
             <header class="d-flex justify-content-between align-items-center flex-wrap-reverse">
                 <h4 class="mb-0">Overview</h4>
                 <div class="d-flex gap-6 ms-2">
@@ -74,24 +75,106 @@
                     </div>
                 </div>
             </header>
-            <div class="row gap-7 mt-12" id="first-row">
+            <!-- Tickets overview - top row-->
+            <section class="row gap-7 mt-12 mx-9" id="first-row">
                 <div class="col p-4 d-flex flex-column align-items-center gap-9 container">
                     <h5 class="mb-0 text-center">Unresolved</h5>
                     <span class="fw-bold">60</span>
                 </div>
                 <div class="col p-4 d-flex flex-column align-items-center gap-9 container active">
-                    <h5 class="mb-0 text-center">Unresolved</h5>
-                    <span class="fw-bold">60</span>
+                    <h5 class="mb-0 text-center">Overdue</h5>
+                    <span class="fw-bold">16</span>
                 </div>
                 <div class="col p-4 d-flex flex-column align-items-center gap-9 container">
-                    <h5 class="mb-0 text-center">Unresolved</h5>
-                    <span class="fw-bold">60</span>
+                    <h5 class="mb-0 text-center">Open</h5>
+                    <span class="fw-bold">43</span>
                 </div>
                 <div class="col p-4 d-flex flex-column align-items-center gap-9 container">
-                    <h5 class="mb-0 text-center">Unresolved</h5>
-                    <span class="fw-bold">60</span>
+                    <h5 class="mb-0 text-center">On hold</h5>
+                    <span class="fw-bold">64</span>
                 </div>
-            </div>
+            </section>
+            <!-- Graph section -->
+            <section class="row mx-9 mt-6 gap-0 d-flex flex-row flex-wrap" id="graph-section">
+                <div class="col-8 d-flex flex-column align-items-start bg-white rounded p-0">
+                    <h5 class="ms-6 mt-6 text-start">Today's trends</h5>
+                    <img class="img-fluid w-90 pb-5 mx-6 mt-2 " src="/assets/graph.png" alt="Today's trend Graph">
+                </div>
+                <div class="col p-0 d-flex flex-column " id="graph-side-bar">
+                    <div class="col p-4 d-flex flex-column align-items-center gap-9 container">
+                        <h5 class="mb-0 text-center fw-normal">Resolved</h5>
+                        <span class="pt-0 fw-semibold">449</span>
+                    </div>
+                    <div class="col p-4 d-flex flex-column align-items-center gap-9 container">
+                        <h5 class="mb-0 text-center fw-normal">Received</h5>
+                        <span class="fw-semibold">426</span>
+                    </div>
+                    <div class="col p-4 d-flex flex-column align-items-center gap-9 container">
+                        <h5 class="mb-0 text-center fw-normal">Average first response time</h5>
+                        <span class="mt-0 fw-semibold">33m</span>
+                    </div>
+                    <div class="col p-4 d-flex flex-column align-items-center gap-9 container">
+                        <h5 class="mb-0 text-center fw-normal">Average response time</h5>
+                        <span class="fw-semibold">3h 8m</span>
+                    </div>
+                    <div class="col p-4 d-flex flex-column align-items-center gap-9 container">
+                        <h5 class="mb-0 text-center fw-normal">Resolution within SLA</h5>
+                        <span class="fw-semibold">94%</span>
+                    </div>
+                </div>
+            </section>
+             <!-- Unresolved and overdue section -->
+            <section class="row gap-7 mt-10 mx-9" id="third-section">
+                <div class="col p-4 d-flex flex-column gap-9 container2">
+                    <div>
+                        <h5 class="mb-0 text-start">Unresolved tickets</h5>
+                        <span class="float-xl-end details">View details</span>
+                    </div>
+                    <h6 class=" smalltext fw-normal">Group: <span class="support ">Support</span></h6>
+                    <div class="col border3 pb-3 pt-2 ">
+                        <h6 class="fw-normal">Waiting an Feature Request</h6>
+                        <span class="float-xl-end ">4238</span>
+                    </div> 
+                    <div class="col border3 pb-3 pt-2  ">
+                        <h6 class="fw-normal">Awaiting Customer Response</h6>
+                        <span class="float-xl-end">1005</span>
+                    </div>
+                    <div class="col border3 pb-3 pt-2 ">
+                        <h6 class="fw-normal">Awaiting Developer Fix</h6>
+                        <span class="float-xl-end">914</span>
+                    </div>
+                    <div class="col pb-2 pt-2 ">
+                        <h6 class="fw-normal">Pending</h6>
+                        <span class="float-xl-end">281</span>
+                    </div>
+                </div>
+                <div class="col p-4 d-flex flex-column gap-9 container2">
+                    <div>
+                        <h5 class="mb-0 text-start">Tasks</h5>
+                        <span class="float-xl-end details">View all</span>
+                    </div>
+                    <h6 class=" smalltext fw-normal">Today</h6>
+                    <div class="col border3 pb-3 pt-2">
+                        <h6 class="fw-normal"><span>Create new task</span> </h6>
+                        <span class="float-xl-end sign-style">+</span>
+                    </div> 
+                    <div class="col border3 pb-3 pt-2 ">
+                        <input type="checkbox" id="checkMe" class="checkbox-round" checked>
+                        <label class="">Finish ticket update</label>
+                        <span class="float-xl-end right-Item urgent-style">URGENT</span>
+                    </div>
+                    <div class="col border3 pb-3 pt-2 ">
+                        <input type="checkbox" id="checkMe" class="checkbox-round" checked>
+                        <label class="">Create new ticket example</label>
+                        <span class="float-xl-end right-Item new-style">NEW</span>
+                    </div>
+                    <div class="col pb-2 pt-2 ">
+                        <input type="checkbox" id="checkMe" class="checkbox-round" checked>
+                        <label for="checkMe" class="">Update ticket report</label>
+                        <span class="float-xl-end right-Item default-style">DEFAULT</span>
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
     <!-- bootstrap scripts -->

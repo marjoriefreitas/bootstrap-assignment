@@ -14694,6 +14694,105 @@ main #first-row .container.active h5, main #first-row .container.active .h5,
 main #first-row .container.active span {
   color: #3751ff;
 }
+main #graph-section {
+  background-color: #ffffff;
+  border: 1px solid #dfe0eb;
+  border-radius: 8px;
+}
+main #graph-section .container {
+  background-color: #ffffff;
+  border: 1px solid #dfe0eb;
+}
+main #graph-section .container h5, main #graph-section .container .h5 {
+  color: #9fa2b4;
+  font-size: 1rem;
+}
+main #graph-section .container span {
+  font-size: 1.5rem;
+}
+main #graph-side-bar {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px !important;
+}
+main #third-section .container2 {
+  background-color: #ffffff;
+  border: 1px solid #dfe0eb;
+  border-radius: 8px;
+}
+main #third-section .container2 h5, main #third-section .container2 .h5 {
+  font-size: 1.5rem;
+}
+main #third-section .container2 h6, main #third-section .container2 .h6 {
+  font-size: 1rem;
+}
+main #third-section .container2 div span {
+  font-size: 1rem;
+  color: #9fa2b4;
+  margin-top: -2rem;
+}
+main #third-section .container2 .smalltext {
+  font-size: 0.9rem;
+  color: #9fa2b4;
+}
+main #third-section .container2 .support {
+  color: black;
+}
+main #third-section .container2 .details {
+  color: #3751ff;
+}
+main #third-section .container2 .border3 {
+  border-bottom: 1px solid #dfe0eb;
+}
+main #third-section .container2 .right-Item {
+  margin-top: -0.1rem;
+}
+main #third-section .container2 .checkbox-round {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #9fa2b4;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+main #third-section .container2 .checkbox-round:checked {
+  background-color: #3751ff;
+}
+main #third-section .container2 .sign-style {
+  background-color: #ededed;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+  color: #9fa2b4;
+  border-radius: 8px;
+}
+main #third-section .container2 .urgent-style {
+  background-color: #fdc432;
+  padding: 0.3rem 1rem 0.3rem 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 8px;
+}
+main #third-section .container2 .new-style {
+  background-color: #1ec188;
+  padding: 0.3rem 1rem 0.3rem 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 8px;
+}
+main #third-section .container2 .default-style {
+  background-color: #ededed;
+  padding: 0.3rem 1rem 0.3rem 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #9fa2b4;
+  border-radius: 8px;
+}
 
 @media (max-width: 575.98px) {
   body div.row {
